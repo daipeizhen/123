@@ -1,0 +1,53 @@
+#include<iostream>
+#include<cstdlib>
+#include<ctime>
+using namespace std;
+
+int main(){
+	int player,com;
+	bool validInput;
+	validInput=true;
+	
+	srand(time(0));
+	cout<<"请输入带表数字 1(石头) 2(剪刀) 3(布)"<<endl;
+	cin>>player;
+	switch(player){
+		case 1:
+			cout<<"你出的是剪刀\n";
+			break;
+		case 2:
+			cout<<"你出的是石头\n";
+			break;
+		case 3:
+			cout<<"你出的是布\n";
+			break;
+		default:
+			cout<<"请不要乱出\n";
+			validInput=false;
+	} 
+	if(validInput){
+		com=1+rand()%3;
+	switch(com){
+		case 1:
+			cout<<"电脑出的是剪刀\n";
+			break;
+		case 2:
+			cout<<"电脑出的是石头\n";
+			break;
+		case 3:
+			cout<<"电脑出的是布\n";
+			break;
+		}
+		switch((player-com+3)%3){
+			case 0:
+				cout<<"平手！"<<endl;
+				break;
+			case 1:
+				cout<<"你赢了!"<<endl;
+				break; 
+			case 2:
+				cout<<"你输了!"<<endl;
+				break; 
+		}
+	}
+}
