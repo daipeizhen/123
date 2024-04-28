@@ -19,4 +19,4 @@
 資工1A 陳文楷：修改程式，寫README
 
 程式畫面截圖：
-![Uploading image.png…]()
+
